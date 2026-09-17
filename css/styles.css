@@ -10907,7 +10907,7 @@ html {
   height: 100%;
   transition: all 0.4s ease 0s;
   transform: translateX(250px);
-  background: #1D809F;
+  background: var(--jg-jet-black);
   border-left: 1px solid rgba(255, 255, 255, 0.1);
 }
 
@@ -10923,14 +10923,14 @@ html {
 .sidebar-nav li.sidebar-nav-item a {
   display: block;
   text-decoration: none;
-  color: #fff;
+  color: var(--jg-white-smoke);
   padding: 15px;
 }
 
 .sidebar-nav li a:hover {
   text-decoration: none;
-  color: #fff;
-  background: rgba(255, 255, 255, 0.2);
+  color: var(--jg-white-smoke);
+  background: var(--jg-jet-black-hover);
 }
 
 .sidebar-nav li a:active,
@@ -10940,7 +10940,7 @@ html {
 
 .sidebar-nav > .sidebar-brand {
   font-size: 1.2rem;
-  background: rgba(52, 58, 64, 0.1);
+  background: var(--jg-jet-black-pressed);
   height: 80px;
   line-height: 50px;
   padding-top: 15px;
@@ -10949,12 +10949,12 @@ html {
 }
 
 .sidebar-nav > .sidebar-brand a {
-  color: #fff;
+  color: var(--jg-white-smoke);
   text-decoration: none;
 }
 
 .sidebar-nav > .sidebar-brand a:hover {
-  color: #fff;
+  color: var(--jg-white-smoke);
   background: none;
 }
 
@@ -10972,7 +10972,7 @@ html {
   height: 50px;
   text-align: center;
   color: #fff;
-  background: rgba(52, 58, 64, 0.5);
+  background: var(--jg-jet-black-pressed);
   line-height: 50px;
   z-index: 999;
 }
@@ -10980,7 +10980,7 @@ html {
   color: #fff;
 }
 .menu-toggle:hover {
-  background: #343a40;
+  background: var(--jg-jet-black-hover);
 }
 
 .btn-xl {
