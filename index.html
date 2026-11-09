@@ -122,53 +122,78 @@
             <div class="container px-4 px-lg-5">
                 <div class="content-section-heading text-center">
                     <h3 class="text-secondary mb-0">Portfolio</h3>
-                    <h2 class="text-white mb-5">Recent Projects</h2>
+                    <h2 class="text-white mb-5">My Recent Project</h2>
                 </div>
-                <div class="row gx-0">
-                    <div class="col-lg-6">
-                        <a class="portfolio-item" href="#!">
-                            <div class="caption">
-                                <div class="caption-content">
-                                    <div class="h2">Stationary</div>
-                                    <p class="mb-0">A yellow pencil with envelopes on a clean, blue backdrop!</p>
+                <!--
+                    Each project card: swap the image for a screenshot or GIF, set the
+                    type (Personal / Work / School), title, one-sentence description,
+                    tech labels, and links. Delete the "Live demo" link until the
+                    project is deployed.
+                -->
+                <div class="row g-4 justify-content-center">
+                    <!-- Project 1 -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card project-card h-100">
+                            <img class="card-img-top" src="assets/img/UltimateTTT_screenshot.png" alt="Screenshot of Reinforcement Learning on Board Games" />
+                            <div class="card-body d-flex flex-column">
+                                <p class="project-type mb-1">Personal</p>
+                                <h4 class="card-title"><strong>Reinforcement Learning on Board Games</strong></h4>
+                                <p class="card-text">I built a generalized RL class that can be used to create and train agents for various board games.</p>
+                                <div class="d-flex flex-wrap gap-2 mb-4">
+                                    <span class="badge rounded-pill skill-badge">Python</span>
+                                    <span class="badge rounded-pill skill-badge">NumPy</span>
+                                    <span class="badge rounded-pill skill-badge">PyTorch</span>
+                                </div>
+                                <div class="mt-auto d-flex gap-2">
+                                    <a class="btn btn-dark btn-sm" href="https://github.com/TheJrock/Reinforcement_Clanker.git" target="_blank" rel="noopener"><i class="fab fa-github me-1"></i>Source</a>
+                                    <!-- <a class="btn btn-primary btn-sm" href="#!" target="_blank" rel="noopener"><i class="fas fa-arrow-up-right-from-square me-1"></i>Live demo</a> -->
                                 </div>
                             </div>
-                            <img class="img-fluid" src="assets/img/portfolio-1.jpg" alt="..." />
-                        </a>
+                        </div>
                     </div>
-                    <div class="col-lg-6">
-                        <a class="portfolio-item" href="#!">
-                            <div class="caption">
-                                <div class="caption-content">
-                                    <div class="h2">Ice Cream</div>
-                                    <p class="mb-0">A dark blue background with a colored pencil, a clip, and a tiny ice cream cone!</p>
+                    <!-- Project 2
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card project-card h-100">
+                            <img class="card-img-top" src="assets/img/portfolio-2.jpg" alt="Screenshot of Project Two" />
+                            <div class="card-body d-flex flex-column">
+                                <p class="project-type mb-1">Work</p>
+                                <h4 class="card-title"><strong>Project Two</strong></h4>
+                                <p class="card-text">One sentence on what it does and what's interesting about it.</p>
+                                <div class="d-flex flex-wrap gap-2 mb-4">
+                                    <span class="badge rounded-pill skill-badge">Tech 1</span>
+                                    <span class="badge rounded-pill skill-badge">Tech 2</span>
+                                    <span class="badge rounded-pill skill-badge">Tech 3</span>
+                                </div>
+                                <div class="mt-auto d-flex gap-2">
+                                    <a class="btn btn-dark btn-sm" href="#!" target="_blank" rel="noopener"><i class="fab fa-github me-1"></i>Source</a>
+                                    <a class="btn btn-primary btn-sm" href="#!" target="_blank" rel="noopener"><i class="fas fa-arrow-up-right-from-square me-1"></i>Live demo</a>
                                 </div>
                             </div>
-                            <img class="img-fluid" src="assets/img/portfolio-2.jpg" alt="..." />
-                        </a>
+                        </div>
                     </div>
-                    <div class="col-lg-6">
-                        <a class="portfolio-item" href="#!">
-                            <div class="caption">
-                                <div class="caption-content">
-                                    <div class="h2">Strawberries</div>
-                                    <p class="mb-0">Strawberries are such a tasty snack, especially with a little sugar on top!</p>
+                    Project 3
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card project-card h-100">
+                            <img class="card-img-top" src="assets/img/portfolio-3.jpg" alt="Screenshot of Project Three" />
+                            <div class="card-body d-flex flex-column">
+                                <p class="project-type mb-1">School</p>
+                                <h4 class="card-title"><strong>Project Three</strong></h4>
+                                <p class="card-text">One sentence on what it does and what's interesting about it.</p>
+                                <div class="d-flex flex-wrap gap-2 mb-4">
+                                    <span class="badge rounded-pill skill-badge">Tech 1</span>
+                                    <span class="badge rounded-pill skill-badge">Tech 2</span>
+                                    <span class="badge rounded-pill skill-badge">Tech 3</span>
+                                </div>
+                                <div class="mt-auto d-flex gap-2">
+                                    <a class="btn btn-dark btn-sm" href="#!" target="_blank" rel="noopener"><i class="fab fa-github me-1"></i>Source</a>
+                                    <a class="btn btn-primary btn-sm" href="#!" target="_blank" rel="noopener"><i class="fas fa-arrow-up-right-from-square me-1"></i>Live demo</a>
                                 </div>
                             </div>
-                            <img class="img-fluid" src="assets/img/portfolio-3.jpg" alt="..." />
-                        </a>
-                    </div>
-                    <div class="col-lg-6">
-                        <a class="portfolio-item" href="#!">
-                            <div class="caption">
-                                <div class="caption-content">
-                                    <div class="h2">Workspace</div>
-                                    <p class="mb-0">A yellow workspace with some scissors, pencils, and other objects.</p>
-                                </div>
-                            </div>
-                            <img class="img-fluid" src="assets/img/portfolio-4.jpg" alt="..." />
-                        </a>
-                    </div>
+                        </div>
+                    </div> -->
+                </div>
+                <div class="text-center mt-5">
+                    <a class="btn btn-primary btn-xl" href="#contact">Contact Me</a>
                 </div>
             </div>
         </section>
@@ -191,7 +216,7 @@
                         <a class="social-link rounded-circle text-white mr-3" href="#!"><i class="icon-social-twitter"></i></a>
                     </li>
                     <li class="list-inline-item">
-                        <a class="social-link rounded-circle text-white" href="#!"><i class="icon-social-github"></i></a>
+                        <a class="social-link rounded-circle text-white" href="https://github.com/TheJrock" target="_blank" rel="noopener" aria-label="GitHub"><i class="icon-social-github"></i></a>
                     </li>
                 </ul>
                 <p class="text-muted small mb-0">Copyright &copy; Your Website 2023</p>
