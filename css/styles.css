@@ -10879,10 +10879,10 @@ html {
 #about .content-section-heading h3 {
   text-shadow: 0 1px 1px rgba(10, 9, 8, 0.10);
 }
-#skills .content-section-heading h2 {
+#skills .content-section-heading h2, #contact .content-section-heading h2 {
   text-shadow: 0 2px 6px rgba(10, 9, 8, 0.35);
 }
-#skills .content-section-heading h3 {
+#skills .content-section-heading h3, #contact .content-section-heading h3 {
   text-shadow: 0 1px 3px rgba(10, 9, 8, 0.3);
 }
 #portfolio .content-section-heading h2 {
@@ -11032,12 +11032,12 @@ footer.footer .social-link {
   width: 4rem;
   line-height: 4.3rem;
   font-size: 1.5rem;
-  background-color: #1D809F;
+  background-color: var(--jg-terracotta);
   transition: background-color 0.15s ease-in-out;
   box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.1);
 }
 footer.footer .social-link:hover {
-  background-color: #155d74;
+  background-color: var(--jg-terracotta-hover);
   text-decoration: none;
 }
 
