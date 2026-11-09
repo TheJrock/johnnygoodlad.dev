@@ -11004,6 +11004,7 @@ html {
 
 .btn-xl {
   padding: 1.25rem 2.5rem;
+  box-shadow: 0 4px 14px rgba(10, 9, 8, 0.35);
 }
 
 .callout {
@@ -11073,9 +11074,6 @@ footer.footer .social-link:hover {
 .masthead h1, .masthead .h1, .masthead h3, .masthead .h3 {
   color: var(--jg-white-smoke);
   text-shadow: 0 2px 10px rgba(10, 9, 8, 0.5);
-}
-.masthead .btn {
-  box-shadow: 0 4px 14px rgba(10, 9, 8, 0.35);
 }
 @media (min-width: 992px) {
   .masthead {
