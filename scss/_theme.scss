@@ -1,0 +1,87 @@
+//
+// Theme
+//
+// Your palette, and how it maps onto Bootstrap's color roles. Change a color
+// here and rebuild: every Bootstrap component, including ones the site doesn't
+// use yet, picks it up along with its hover, pressed, and focus shades.
+//
+
+// ---------------------------------------------------------------------------
+// Palette
+// ---------------------------------------------------------------------------
+
+$jg-stone-brown:          #5E503F;
+$jg-dusty-taupe:          #a9927d;
+$jg-white-smoke:          #f2f4f3;
+$jg-white-smoke-hover:    #dadcdb;
+$jg-white-smoke-pressed:  #c2c3c2;
+$jg-white-smoke-light:    #f7f8f8;
+$jg-jet-black:            #22333b;
+$jg-jet-black-hover:      #1f2e35;
+$jg-jet-black-pressed:    #1b292f;
+$jg-jet-black-light:      #7a8589;
+$jg-black:                #0a0908;
+$jg-terracotta:           #BC6C25;
+$jg-terracotta-hover:     #a96121;
+$jg-terracotta-pressed:   #96561e;
+$jg-terracotta-light:     #d7a77c;
+$jg-gold:                 #C08A28;
+$jg-gold-hover:           #ad7c24;
+$jg-gold-pressed:         #9a6e20;
+$jg-gold-light:           #d9b97e;
+
+// Each of these is also available in CSS as var(--jg-<name>)
+$jg-colors: (
+  "stone-brown":          $jg-stone-brown,
+  "dusty-taupe":          $jg-dusty-taupe,
+  "white-smoke":          $jg-white-smoke,
+  "white-smoke-hover":    $jg-white-smoke-hover,
+  "white-smoke-pressed":  $jg-white-smoke-pressed,
+  "white-smoke-light":    $jg-white-smoke-light,
+  "jet-black":            $jg-jet-black,
+  "jet-black-hover":      $jg-jet-black-hover,
+  "jet-black-pressed":    $jg-jet-black-pressed,
+  "jet-black-light":      $jg-jet-black-light,
+  "black":                $jg-black,
+  "terracotta":           $jg-terracotta,
+  "terracotta-hover":     $jg-terracotta-hover,
+  "terracotta-pressed":   $jg-terracotta-pressed,
+  "terracotta-light":     $jg-terracotta-light,
+  "gold":                 $jg-gold,
+  "gold-hover":           $jg-gold-hover,
+  "gold-pressed":         $jg-gold-pressed,
+  "gold-light":           $jg-gold-light,
+);
+
+// ---------------------------------------------------------------------------
+// Bootstrap color roles
+// ---------------------------------------------------------------------------
+
+$primary:    $jg-terracotta;   // .btn-primary, .text-primary, links, focus rings, form controls
+$secondary:  $jg-gold;         // .text-secondary (section labels), .btn-secondary
+$light:      $jg-white-smoke;  // .bg-light, .btn-light
+$dark:       $jg-jet-black;    // .bg-dark, .btn-dark
+
+// Bootstrap's "white" and "black" everywhere (.text-white, .bg-white, cards, shadows)
+$white:      $jg-white-smoke;
+$black:      $jg-black;
+$body-color: $jg-black;
+
+// Bootstrap picks white smoke or black text for each colored background,
+// whichever has enough contrast. Its default minimum (4.5:1) would put black
+// text on terracotta; 3:1 keeps your white smoke text on terracotta buttons.
+$min-contrast-ratio: 3;
+
+// Hover and pressed shades: 10% and 20% darker, the same as your palette's
+// -hover and -pressed colors.
+$btn-hover-bg-shade-amount:       10%;
+$btn-hover-border-shade-amount:   10%;
+$btn-active-bg-shade-amount:      20%;
+$btn-active-border-shade-amount:  20%;
+
+// ---------------------------------------------------------------------------
+// Typography (from the Stylish Portfolio template)
+// ---------------------------------------------------------------------------
+
+$font-family-base: "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+$headings-font-weight: 700;

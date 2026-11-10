@@ -1,0 +1,90 @@
+//
+// Sidebar navigation and the menu (☰) button that opens it
+//
+
+#sidebar-wrapper {
+  position: fixed;
+  z-index: 2;
+  right: 0;
+  width: 250px;
+  height: 100%;
+  transition: all 0.4s ease 0s;
+  transform: translateX(250px);
+  background: var(--jg-jet-black);
+  border-left: 1px solid rgba($jg-white-smoke, 0.1);
+
+  &.active {
+    right: 250px;
+    width: 250px;
+    transition: all 0.4s ease 0s;
+  }
+}
+
+.sidebar-nav {
+  position: absolute;
+  top: 0;
+  width: 250px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  li.sidebar-nav-item a {
+    display: block;
+    text-decoration: none;
+    color: var(--jg-white-smoke);
+    padding: 15px;
+  }
+
+  li a:hover {
+    text-decoration: none;
+    color: var(--jg-white-smoke);
+    background: var(--jg-jet-black-hover);
+  }
+
+  li a:active,
+  li a:focus {
+    text-decoration: none;
+  }
+
+  > .sidebar-brand {
+    font-size: 1.2rem;
+    background: var(--jg-jet-black-pressed);
+    height: 80px;
+    line-height: 50px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 15px;
+
+    a {
+      color: var(--jg-white-smoke);
+      text-decoration: none;
+    }
+
+    a:hover {
+      color: var(--jg-white-smoke);
+      background: none;
+    }
+  }
+}
+
+.menu-toggle {
+  position: fixed;
+  right: 15px;
+  top: 15px;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  color: var(--jg-white-smoke);
+  background: var(--jg-jet-black-pressed);
+  line-height: 50px;
+  z-index: 999;
+
+  &:focus,
+  &:hover {
+    color: var(--jg-white-smoke);
+  }
+
+  &:hover {
+    background: var(--jg-jet-black-hover);
+  }
+}

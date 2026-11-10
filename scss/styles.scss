@@ -1,0 +1,24 @@
+/*!
+* Based on Start Bootstrap - Stylish Portfolio v6.0.6 (https://startbootstrap.com/theme/stylish-portfolio)
+* Copyright 2013-2023 Start Bootstrap
+* Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-stylish-portfolio/blob/master/LICENSE)
+*/
+
+//
+// Entry point. Builds css/styles.css: `npm run build` (once) or `npm run watch` (rebuilds on save).
+// Don't edit css/styles.css directly; it's overwritten on every build.
+//
+
+// 1. Your palette and Bootstrap settings (must come before Bootstrap)
+@import "theme";
+
+// 2. Bootstrap, untouched, from node_modules
+@import "bootstrap/scss/bootstrap";
+
+// 3. Site styles
+@import "site/base";
+@import "site/sidebar";
+@import "site/masthead";
+@import "site/skills";
+@import "site/projects";
+@import "site/footer";

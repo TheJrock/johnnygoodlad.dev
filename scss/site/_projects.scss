@@ -1,0 +1,35 @@
+//
+// Projects: cards in the portfolio section
+//
+
+.project-card {
+  background-color: var(--jg-white-smoke);
+  color: var(--jg-jet-black);
+  border: none;
+  border-radius: 0.75rem;
+  overflow: hidden;
+  box-shadow: 0 4px 14px rgba($jg-black, 0.35);
+
+  // Screenshots of any size are cropped to the same shape
+  .card-img-top {
+    aspect-ratio: 16 / 10;
+    object-fit: cover;
+  }
+
+  // "Personal" / "Work" / "School"
+  .project-type {
+    color: var(--jg-stone-brown);
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  // Tech labels: reversed colors so they show on the light card
+  .skill-badge {
+    --bs-badge-color: var(--jg-white-smoke);
+    --bs-badge-font-size: 0.85rem;
+    background-color: var(--jg-stone-brown);
+    box-shadow: none;
+  }
+}

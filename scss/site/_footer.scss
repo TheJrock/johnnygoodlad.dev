@@ -1,0 +1,25 @@
+//
+// Footer: contact icons and copyright
+//
+
+footer.footer {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+
+  .social-link {
+    display: block;
+    text-decoration: none;
+    height: 4rem;
+    width: 4rem;
+    line-height: 4.3rem;
+    font-size: 1.5rem;
+    background-color: var(--jg-terracotta);
+    transition: background-color 0.15s ease-in-out;
+    box-shadow: 0 3px 3px 0 rgba($jg-black, 0.1);
+
+    &:hover {
+      background-color: var(--jg-terracotta-hover);
+      text-decoration: none;
+    }
+  }
+}
