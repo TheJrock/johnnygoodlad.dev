@@ -135,23 +135,29 @@
                     <h3 class="text-secondary mb-0">Portfolio</h3>
                     <h2 class="text-white mb-5">My Recent Projects</h2>
                 </div>
-                <!--
-                    Each project card: swap the image for a screenshot or GIF, set the
-                    type (Personal / Work / School), title, one-sentence description,
-                    tech labels, and links. Delete the "Live demo" link until the
-                    project is deployed.
-                -->
-                <div class="row g-4 justify-content-center">
-                    <div class="col-md-6 col-lg-4">
+            </div>
+            <!--
+                Each project card: swap the image for a screenshot or GIF, set the
+                type (Personal / Work / School), title, one-sentence description,
+                tech labels, and links. Delete the "Live demo" link until the
+                project is deployed.
+
+                Add as many cards as you like: the first three sit in focus in the
+                middle, and the rest wait faded at the side until scrolled in.
+            -->
+            <div class="project-carousel">
+                <div class="project-track" id="project-track">
+                    <div class="project-col">
                         <div class="card project-card h-100">
                             <img class="card-img-top" src="assets/img/UltimateTTT_screenshot.png" alt="Screenshot of Reinforcement Learning on Board Games" />
                             <div class="card-body d-flex flex-column">
-                                <p class="project-type mb-1">Personal</p>
+                                <p class="project-type mb-1">Personal • Summer 2026</p>
                                 <h4 class="card-title"><strong>Reinforcement Learning on Board Games</strong></h4>
-                                <p class="card-text">I built a generalized RL class that can be used to create and train agents for various board games.</p>
+                                <p class="card-text">My first attempt at implementing RL for board games. I built a generalized class for RL on two player boardgames before taking any RL coursework.</p>
                                 <div class="d-flex flex-wrap gap-2 mb-4">
+                                    <span class="badge rounded-pill skill-badge">DQN</span>
+                                    <span class="badge rounded-pill skill-badge">Self-Play</span>
                                     <span class="badge rounded-pill skill-badge">Python</span>
-                                    <span class="badge rounded-pill skill-badge">NumPy</span>
                                     <span class="badge rounded-pill skill-badge">PyTorch</span>
                                 </div>
                                 <div class="mt-auto d-flex gap-2">
@@ -161,16 +167,37 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-6 col-lg-4">
+                    <div class="project-col">
+                        <div class="card project-card h-100">
+                            <img class="card-img-top" src="assets/img/othello-rl-code-screenshot.png" alt="Screenshot of Othello RL" />
+                            <div class="card-body d-flex flex-column">
+                                <p class="project-type mb-1">Reinforcement Learning Final Project • Fall 2026</p>
+                                <h4 class="card-title"><strong>Othello RL (in progress)</strong></h4>
+                                <p class="card-text">Going back to Othello from my earlier project, applying what I've learned from my reinforcement learning class to improve the agents' performance.</p>
+                                <div class="d-flex flex-wrap gap-2 mb-4">
+                                    <span class="badge rounded-pill skill-badge">Self-Play</span>
+                                    <span class="badge rounded-pill skill-badge">LaTeX</span>
+                                    <span class="badge rounded-pill skill-badge">Python</span>
+                                    <span class="badge rounded-pill skill-badge">PyTorch</span>
+                                </div>
+                                <div class="mt-auto d-flex gap-2">
+                                    <a class="btn btn-dark btn-sm" href="https://github.com/TheJrock/othello-rl.git" target="_blank" rel="noopener"><i class="fab fa-github me-1"></i>Source</a>
+                                    <!-- <a class="btn btn-primary btn-sm" href="#!" target="_blank" rel="noopener"><i class="fas fa-arrow-up-right-from-square me-1"></i>Live demo</a> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-col">
                         <div class="card project-card h-100">
                             <img class="card-img-top" src="assets/img/corner_case_code_screenshot.png" alt="Screenshot of Corner Case" />
                             <div class="card-body d-flex flex-column">
-                                <p class="project-type mb-1">Personal</p>
+                                <p class="project-type mb-1">Personal • Fall 2026</p>
                                 <h4 class="card-title"><strong>Corner Case (in progress)</strong></h4>
-                                <p class="card-text">I'm building RL agents for the game 2048.</p>
+                                <p class="card-text">A side project to practice single-agent reinforcement learning on the game 2048.</p>
                                 <div class="d-flex flex-wrap gap-2 mb-4">
+                                    <span class="badge rounded-pill skill-badge">DQN</span>
+                                    <span class="badge rounded-pill skill-badge">Stochastic Environments</span>
                                     <span class="badge rounded-pill skill-badge">Python</span>
-                                    <span class="badge rounded-pill skill-badge">NumPy</span>
                                     <span class="badge rounded-pill skill-badge">PyTorch</span>
                                 </div>
                                 <div class="mt-auto d-flex gap-2">
@@ -180,16 +207,17 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-6 col-lg-4">
+                    <div class="project-col">
                         <div class="card project-card h-100">
                             <img class="card-img-top" src="assets/img/DinnerBellMockup.png" alt="Screenshot of DinnerBell Mockup" />
                             <div class="card-body d-flex flex-column">
-                                <p class="project-type mb-1">Capstone Project</p>
+                                <p class="project-type mb-1">Capstone Project • Fall 2026 - Winter 2027</p>
                                 <h4 class="card-title"><strong>DinnerBell (in progress)</strong></h4>
                                 <p class="card-text">An AI that helps users plan and manage their meals efficiently.</p>
                                 <div class="d-flex flex-wrap gap-2 mb-4">
-                                    <span class="badge rounded-pill skill-badge">Celery</span>
+                                    <span class="badge rounded-pill skill-badge">Django</span>
                                     <span class="badge rounded-pill skill-badge">PostgreSQL</span>
+                                    <span class="badge rounded-pill skill-badge">Celery</span>
                                     <span class="badge rounded-pill skill-badge">Redis</span>
                                 </div>
                                 <div class="mt-auto d-flex gap-2">
@@ -200,6 +228,10 @@
                         </div>
                     </div>
                 </div>
+                <button class="project-arrow project-arrow-prev" type="button" aria-label="Previous project" aria-controls="project-track"><i class="fas fa-chevron-left"></i></button>
+                <button class="project-arrow project-arrow-next" type="button" aria-label="Next project" aria-controls="project-track"><i class="fas fa-chevron-right"></i></button>
+            </div>
+            <div class="container px-4 px-lg-5">
                 <div class="text-center mt-5">
                     <a class="btn btn-primary btn-xl" href="#contact">Contact Me</a>
                 </div>

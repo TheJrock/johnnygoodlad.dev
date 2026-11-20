@@ -1,6 +1,107 @@
 //
-// Projects: cards in the portfolio section
+// Projects: a sideways-scrolling row of cards in the portfolio section
 //
+// The carousel runs the full width of the page. Its middle lines up with the
+// page's content column, and the cards there (three on large screens, two on
+// tablets, one on phones) are in full focus. Cards scrolled past either side
+// stay visible but faded, so it's clear there are more to see.
+//
+
+.project-carousel {
+  position: relative;
+  // Lets the sizes below use the carousel's width (cqw = 1% of it)
+  container-type: inline-size;
+
+  // Width of the focus area. It matches the Bootstrap row the cards used to sit in
+  // (inside .container.px-4.px-lg-5), so the cards keep their size: the container's
+  // width, minus its side padding, plus the 0.75rem card gutter on each side.
+  --focus-width: calc(100cqw - 1.5rem);
+  --cards-in-focus: 1;
+  // The faded strip on each side of the focus area
+  --side: calc((100cqw - var(--focus-width)) / 2);
+
+  @each $breakpoint, $container-width in $container-max-widths {
+    @include media-breakpoint-up($breakpoint) {
+      $padding: 1.5rem; // .px-4
+      @if breakpoint-min($breakpoint) >= breakpoint-min(lg) {
+        $padding: 3rem; // .px-lg-5
+      }
+      --focus-width: calc(#{$container-width} - #{2 * $padding} + 1.5rem);
+    }
+  }
+
+  @include media-breakpoint-up(md) { --cards-in-focus: 2; }
+  @include media-breakpoint-up(lg) { --cards-in-focus: 3; }
+}
+
+.project-track {
+  display: flex;
+  // A short list stays centered; once it overflows, it starts at the first card
+  justify-content: safe center;
+  overflow-x: auto;
+  // Snap so a scroll always comes to rest with whole cards in the focus area
+  scroll-snap-type: x mandatory;
+  padding-inline: var(--side);
+  scroll-padding-inline: var(--side);
+  // The arrows replace the scrollbar
+  scrollbar-width: none;
+  // Scrolling clips anything outside the box, so leave room for the card shadows;
+  // the negative margins keep the spacing around the cards the same
+  padding-block: 1.5rem;
+  margin-block: -1.5rem;
+
+  // Full strength over the focus area, fading out toward the edges of the page
+  mask-image: linear-gradient(
+    to right,
+    rgba(#000, 0.15),
+    #000 var(--side),
+    #000 calc(100% - var(--side)),
+    rgba(#000, 0.15)
+  );
+
+  @media (prefers-reduced-motion: no-preference) {
+    scroll-behavior: smooth;
+  }
+
+  &::-webkit-scrollbar { display: none; } // older Safari
+}
+
+.project-col {
+  flex: 0 0 calc(var(--focus-width) / var(--cards-in-focus));
+  padding-inline: 0.75rem;
+  scroll-snap-align: start;
+}
+
+// Previous / next buttons, centered in the faded strips (but never off the screen).
+// Each one hides when there's nothing more to see in its direction.
+.project-arrow {
+  position: absolute;
+  top: 50%;
+  translate: 0 -50%;
+  z-index: 1;
+  display: grid;
+  place-items: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  background-color: var(--jg-white-smoke);
+  color: var(--jg-jet-black);
+  box-shadow: 0 4px 14px rgba($jg-black, 0.35);
+  transition: opacity 0.2s, visibility 0.2s, background-color 0.15s;
+
+  &:hover { background-color: var(--jg-white-smoke-hover); }
+  &:active { background-color: var(--jg-white-smoke-pressed); }
+
+  &:disabled {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+.project-arrow-prev { left: max(0.5rem, calc(var(--side) / 2 - 1.375rem)); }
+.project-arrow-next { right: max(0.5rem, calc(var(--side) / 2 - 1.375rem)); }
 
 .project-card {
   background-color: var(--jg-white-smoke);

@@ -10989,6 +10989,112 @@ html {
   box-shadow: 0 1px 2px rgba(10, 9, 8, 0.15);
 }
 
+.project-carousel {
+  position: relative;
+  container-type: inline-size;
+  --focus-width: calc(100cqw - 1.5rem);
+  --cards-in-focus: 1;
+  --side: calc((100cqw - var(--focus-width)) / 2);
+}
+@media (min-width: 576px) {
+  .project-carousel {
+    --focus-width: calc(540px - 3rem + 1.5rem);
+  }
+}
+@media (min-width: 768px) {
+  .project-carousel {
+    --focus-width: calc(720px - 3rem + 1.5rem);
+  }
+}
+@media (min-width: 992px) {
+  .project-carousel {
+    --focus-width: calc(960px - 6rem + 1.5rem);
+  }
+}
+@media (min-width: 1200px) {
+  .project-carousel {
+    --focus-width: calc(1140px - 6rem + 1.5rem);
+  }
+}
+@media (min-width: 1400px) {
+  .project-carousel {
+    --focus-width: calc(1320px - 6rem + 1.5rem);
+  }
+}
+@media (min-width: 768px) {
+  .project-carousel {
+    --cards-in-focus: 2;
+  }
+}
+@media (min-width: 992px) {
+  .project-carousel {
+    --cards-in-focus: 3;
+  }
+}
+
+.project-track {
+  display: flex;
+  justify-content: safe center;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding-inline: var(--side);
+  scroll-padding-inline: var(--side);
+  scrollbar-width: none;
+  padding-block: 1.5rem;
+  margin-block: -1.5rem;
+  mask-image: linear-gradient(to right, rgba(0, 0, 0, 0.15), #000 var(--side), #000 calc(100% - var(--side)), rgba(0, 0, 0, 0.15));
+}
+@media (prefers-reduced-motion: no-preference) {
+  .project-track {
+    scroll-behavior: smooth;
+  }
+}
+.project-track::-webkit-scrollbar {
+  display: none;
+}
+
+.project-col {
+  flex: 0 0 calc(var(--focus-width) / var(--cards-in-focus));
+  padding-inline: 0.75rem;
+  scroll-snap-align: start;
+}
+
+.project-arrow {
+  position: absolute;
+  top: 50%;
+  translate: 0 -50%;
+  z-index: 1;
+  display: grid;
+  place-items: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  background-color: var(--jg-white-smoke);
+  color: var(--jg-jet-black);
+  box-shadow: 0 4px 14px rgba(10, 9, 8, 0.35);
+  transition: opacity 0.2s, visibility 0.2s, background-color 0.15s;
+}
+.project-arrow:hover {
+  background-color: var(--jg-white-smoke-hover);
+}
+.project-arrow:active {
+  background-color: var(--jg-white-smoke-pressed);
+}
+.project-arrow:disabled {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.project-arrow-prev {
+  left: max(0.5rem, var(--side) / 2 - 1.375rem);
+}
+
+.project-arrow-next {
+  right: max(0.5rem, var(--side) / 2 - 1.375rem);
+}
+
 .project-card {
   background-color: var(--jg-white-smoke);
   color: var(--jg-jet-black);

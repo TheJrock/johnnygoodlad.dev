@@ -56,6 +56,47 @@ window.addEventListener('DOMContentLoaded', event => {
     })
 })
 
+// Projects carousel: previous / next arrows, and clicking a faded card scrolls it into focus
+window.addEventListener('DOMContentLoaded', () => {
+    const track = document.getElementById('project-track');
+    if (!track) return;
+    const prev = document.querySelector('.project-arrow-prev');
+    const next = document.querySelector('.project-arrow-next');
+
+    // Hide an arrow when there's nothing more to see in its direction
+    const updateArrows = () => {
+        const maxScroll = track.scrollWidth - track.clientWidth;
+        prev.disabled = track.scrollLeft <= 1;
+        next.disabled = track.scrollLeft >= maxScroll - 1;
+    };
+    track.addEventListener('scroll', updateArrows, { passive: true });
+    window.addEventListener('resize', updateArrows);
+    updateArrows();
+
+    // Move one card per click
+    const scrollByCard = direction => {
+        const cardWidth = track.querySelector('.project-col').offsetWidth;
+        track.scrollBy({ left: direction * cardWidth });
+    };
+    prev.addEventListener('click', () => scrollByCard(-1));
+    next.addEventListener('click', () => scrollByCard(1));
+
+    // A click on a card that's (partly) in the faded strips brings it into focus,
+    // instead of following whatever link was clicked
+    track.addEventListener('click', event => {
+        const col = event.target.closest('.project-col');
+        if (!col) return;
+        const trackBox = track.getBoundingClientRect();
+        const style = getComputedStyle(track);
+        const focusLeft = trackBox.left + parseFloat(style.paddingLeft);
+        const focusRight = trackBox.right - parseFloat(style.paddingRight);
+        const colBox = col.getBoundingClientRect();
+        if (colBox.left >= focusLeft - 2 && colBox.right <= focusRight + 2) return;
+        event.preventDefault();
+        col.scrollIntoView({ block: 'nearest', inline: 'nearest' });
+    });
+});
+
 function fadeOut(el) {
     el.style.opacity = 1;
     (function fade() {
